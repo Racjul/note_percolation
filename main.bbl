@@ -1,0 +1,80 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{duminilcopin2022introduction}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=3958f315c246adbd73a700a7aad801fc}{%
+           family={Duminil-Copin},
+           familyi={D\bibinithyphendelim C\bibinitperiod},
+           given={Hugo},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{3958f315c246adbd73a700a7aad801fc}
+      \strng{fullhash}{3958f315c246adbd73a700a7aad801fc}
+      \strng{fullhashraw}{3958f315c246adbd73a700a7aad801fc}
+      \strng{bibnamehash}{3958f315c246adbd73a700a7aad801fc}
+      \strng{authorbibnamehash}{3958f315c246adbd73a700a7aad801fc}
+      \strng{authornamehash}{3958f315c246adbd73a700a7aad801fc}
+      \strng{authorfullhash}{3958f315c246adbd73a700a7aad801fc}
+      \strng{authorfullhashraw}{3958f315c246adbd73a700a7aad801fc}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.unige.ch/~duminil/publi/2017percolation.pdf}}
+      \field{note}{Lecture notes, November 2, 2022}
+      \field{title}{Introduction to Bernoulli Percolation}
+      \field{year}{2022}
+    \endentry
+    \entry{grimmett1999percolation}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=da590b6f1dfca139a7bb485dbeab5496}{%
+           family={Grimmett},
+           familyi={G\bibinitperiod},
+           given={Geoffrey},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{da590b6f1dfca139a7bb485dbeab5496}
+      \strng{fullhash}{da590b6f1dfca139a7bb485dbeab5496}
+      \strng{fullhashraw}{da590b6f1dfca139a7bb485dbeab5496}
+      \strng{bibnamehash}{da590b6f1dfca139a7bb485dbeab5496}
+      \strng{authorbibnamehash}{da590b6f1dfca139a7bb485dbeab5496}
+      \strng{authornamehash}{da590b6f1dfca139a7bb485dbeab5496}
+      \strng{authorfullhash}{da590b6f1dfca139a7bb485dbeab5496}
+      \strng{authorfullhashraw}{da590b6f1dfca139a7bb485dbeab5496}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd}
+      \field{title}{Percolation}
+      \field{year}{1999}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

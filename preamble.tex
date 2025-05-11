@@ -1,0 +1,43 @@
+%Package I use
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{lmodern} 
+\usepackage{enumitem}
+\usepackage{csquotes} 
+\usepackage{bbold}
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{references.bib} % This loads your .bib file
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\Large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\Large\bfseries}{\thesubsubsection}{1em}{}
+
+\usepackage{xcolor}
+\usepackage[colorlinks=false, pdfborder={0 0 2}, linkbordercolor={red!50!black}, citebordercolor={blue!50!black}, urlbordercolor={green!50!black}]{hyperref}
+
+
+\newcommand{\probP}{\text{I\kern-0.15em P}}
+\newtheoremstyle{break}
+  {\topsep}{\topsep}%
+  {\itshape}{}%
+  {\bfseries}{}%
+  {\newline}{}%
+%\theoremstyle{break}
+% Définitions pour les environnements théorèmes
+\newtheorem{theorem}{Théorème}[section]
+\newtheorem{lemma}[theorem]{Lemme}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollaire}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Définition}
+
+
+\setlength{\parindent}{20pt}
