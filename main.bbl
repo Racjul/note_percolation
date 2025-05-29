@@ -74,6 +74,32 @@
       \field{title}{Percolation}
       \field{year}{1999}
     \endentry
+    \entry{heckel2010percolation}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=6d9d043c19fbbc79148b5f9b31b1bd31}{%
+           family={Heckel},
+           familyi={H\bibinitperiod},
+           given={Riley},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{6d9d043c19fbbc79148b5f9b31b1bd31}
+      \strng{fullhash}{6d9d043c19fbbc79148b5f9b31b1bd31}
+      \strng{fullhashraw}{6d9d043c19fbbc79148b5f9b31b1bd31}
+      \strng{bibnamehash}{6d9d043c19fbbc79148b5f9b31b1bd31}
+      \strng{authorbibnamehash}{6d9d043c19fbbc79148b5f9b31b1bd31}
+      \strng{authornamehash}{6d9d043c19fbbc79148b5f9b31b1bd31}
+      \strng{authorfullhash}{6d9d043c19fbbc79148b5f9b31b1bd31}
+      \strng{authorfullhashraw}{6d9d043c19fbbc79148b5f9b31b1bd31}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{University of Chicago VIGRE REU Program}
+      \field{note}{Available at \url{https://www.math.uchicago.edu/~may/VIGRE/VIGRE2010/REUPapers/Heckel.pdf}}
+      \field{title}{Percolation and the Existence of the Infinite Open Cluster}
+      \field{year}{2010}
+      \true{nocite}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

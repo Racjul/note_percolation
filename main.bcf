@@ -2374,6 +2374,7 @@
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">duminilcopin2022introduction</bcf:citekey>
     <bcf:citekey order="2" intorder="1">grimmett1999percolation</bcf:citekey>
+    <bcf:citekey order="3" intorder="1" nocite="1">heckel2010percolation</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

@@ -4,11 +4,12 @@
     \item $\theta(p) :=\probP_p[\lVert C \rVert = \infty] $
     \item $\psi(p) :=\probP_p["\text{Il existe un \textit{cluster} infini}"] $
 \end{itemize}
+Par invariance de la translation du réseau et de la mesure de probabilité, on peut dire que la composante connexe étudié est toujours centré en 0. 
 \proposition(Existence d'un point critique)\\[10pt]\label{thm:existence}
 Il existe $p_c \in [0,1]$ tel que
 \begin{enumerate}[label=\roman*)]
     \item $ \psi(p) = 0$ si $p < p_c(d) $\\[0pt]
-    \item $ \psi(p) = 1$ si $p > p_c(d) $\\
+    \item $ \psi(p) >0$ si $p > p_c(d) $\\
 \end{enumerate}
 \begin{proof}
     Soit $X_e \sim \mathcal{U}(0,1)$ et $p \in [0,1]$. On peut facilement voir que
@@ -22,8 +23,14 @@ Il existe $p_c \in [0,1]$ tel que
     Si $\omega^{p_1}$ réalise un \textit{cluster} infini, alors $\omega^{p_2}$  le réalise aussi. 
     On peut en déduire que $\psi$ est croissant sur $p$.
     Il est évident que $\psi (0) = 0$ et $\psi(1)=1$. 
-    Cela implique qu'il existe un unique $p_c \in [0,1]$ tel que $\psi(p) = 1$ si $p > p_c(d)$ et $\psi(p) = 0$ si $p < p_c(d)$.
+    Cela implique qu'il existe un unique $p_c \in [0,1]$ tel que $\psi(p) >0$ si $p > p_c(d)$ et $\psi(p) = 0$ si $p < p_c(d)$.
 \end{proof}
+
+
+\textbf{Note}:   
+On dénote par $N(p)$ le nombre de cluster infini
+On dénote par $N(p)$ le nombre de cluster infini
+On pourrait montrer que $\psi(p) =1 \text{ si } p>p_c$ en utilisant la loi du zéro-un de Kolmogorov puisque si on ferme ou ouvre un nombre fini d'arête, cela ne changera pas la nature du résultat et les variables aléatoire sur chaque arête sont iid.
 \begin{theorem}[]
 
     $$
@@ -32,9 +39,42 @@ Il existe $p_c \in [0,1]$ tel que
 \end{theorem}
 \begin{proof}
     On va d'abord montrer que si $\psi(p) = 0$ alors $p_c(d)>0$. Pour cela, on va encore utiliser l'argument de la monotonie. Soit $p_1,p_2 \in (0,1]$, tel que $p_1 \leq p_2$. On a déjà montré \ref{thm:existence} que $\psi$ est croissante sur $p$. Donc si $\psi(p_1) = 0$ alors $\psi(p_2) = 0$.Cela implique que $\psi(\hat{p}) = 0 \forall\hat{p} \in [0,p]$ et donc $p_c>0$.\\
-
     Si $\psi(p) > 0$ alors $\exists x \in \mathbb{Z}^d$ tel que $\theta(p)>0$.
-
-
 \end{proof}
-
+\subsection{Unicité du cluster infini}
+\begin{theorem}On dénote par $N(p)$ le nombre de clusters infinis dans $\mathbb{L}^d$.\\
+    \begin{equation}
+        N(p) \in \{0,1,\infty\}
+    \end{equation}
+\end{theorem}
+\begin{proof}
+    On défini les évènements suivants:$\mathcal{E}_{\leq1}$ =\{"Il existe 0 ou 1 cluster infini"\}, $\mathcal{E}_{\infty}$= \{"Il existe une infinité de cluster infini"\} et $\mathcal{E}_{\leq \infty}$ = \{"Il existe un nombre fini clusters infinis"\}.\\ On examine le cas $p>p_c$, car le reste est trivial. On veut montrer que si le nombre de cluster est fini, alors il est égal à 0 ou 1.
+    Autrement dit, $\probP[\mathcal{E}_{\leq \infty}] = 1 \implies \probP[\mathcal{E}_{\leq1}] = 1 $. On prend $\Lambda_n:=[-n,n]^d$ un carré de longueur $2n$ et l'évènement:$$
+    \mathcal{F}=\{\text{ "Tous les clusters infinis intersectent $\Lambda_n$" \}}.
+    $$  On prend maintenant l'évènement $E_n=\{\text{"Tous les arêtes dans $\Lambda_n$ sont fermées"\}}$. Or, si les arêtes de $\Lambda_n$ sont fermées et que tous les clusters infinis intersectent $\Lambda_n$, alors il existe 1 seul cluster infini.
+    On a donc que 
+    \begin{align*}
+        \probP_p[\mathcal{E}_\leq1] &\geq \probP_p[\mathcal{F} \cap E_n]\\
+                                    &=\probP_p[\mathcal{F}]\cdot\probP_p[E_n]\tag{Indépendance}\\ 
+                                    &\geq \probP_p[\mathcal{F}] \cdot p^{\lVert \mathbb{E}_n \rVert}\\ 
+                                    &\geq c \text{ }\probP[\mathcal{E}_{<\infty}]\cdot p^{\lVert \mathbb{E}_n \rVert}\tag{$n$ assez grand}\\
+                                    &>0
+    \end{align*}
+    %TODO
+    Or, puisque $\probP_p[\mathcal{E}_{\leq1}] > 0$ alors $\probP_p[\mathcal{E}_{\leq1}] = 1$ par l'argument d'ergodicité. 
+    \begin{align*}
+        \probP_p[\mathcal{E_{<\infty}}] &= \probP_p\left[\bigcup_{i\geq1}\mathcal{E}_{i}\right]\\
+                                        &= 1 + \probP_p\left[\bigcup_{i\geq2}\mathcal{E}_{i}\right]\\
+                                        &\implies \probP_p\left[\bigcup_{i\geq2}\mathcal{E}_{i}\right] = 0
+    \end{align*}
+    Et donc la probabilité d'avoir un nombre fini $\geq2$ de clusters infinis est nulle.\\
+\end{proof}
+\begin{theorem}[Unicité du cluster infini]
+    Si $\theta(p) =1 $, alors
+    $$
+    \probP_p[\text{"Il existe un unique cluster infini" }] = 1
+    $$
+    
+\end{theorem}
+\begin{proof}    
+\end{proof}
